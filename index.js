@@ -59,7 +59,9 @@ module.exports = function(opts, cb) {
   if (!cb) cb = noop
 
   var github = parseGithub(opts.github)
-  var folder = path.join(os.tmpDir(), 'github-to-s3', github.username+'-'+github.repository)
+  var user = opts.user || opts.username
+  var repo = opts.repo || opts.repository
+  var folder = path.join(os.tmpDir(), 'github-to-s3', user+'-'+repo)
 
   var upload = function(file, cb) {
     var name = file.slice(folder.length+1)
@@ -96,7 +98,7 @@ module.exports = function(opts, cb) {
 
   rimraf(folder, function() {
     pump(
-      request('https://github.com/'+github.username+'/'+github.repository+'/archive/'+(github.checkout || 'master')+'.tar.gz'),
+      request('https://github.com/'+user+'/'+repo+'/archive/'+(github.checkout || 'master')+'.tar.gz'),
       zlib.createGunzip(),
       tar.extract(folder, {map:map}),
       onextract
@@ -109,8 +111,8 @@ if (require.main !== module) return
 module.exports({
   install: 'npm-buildpack',
   github: {
-    username: 'e-conomic',
-    repository: 'git-fork'
+    user: 'e-conomic',
+    repo: 'git-fork'
   },
   s3: {
     access: '...',
