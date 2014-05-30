@@ -1,0 +1,32 @@
+{
+  "name": "github-to-s3",
+  "description": "Download a repo, build it and upload it to s3",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ignore-file": "^1.1.0",
+    "request": "^2.36.0",
+    "rimraf": "^2.2.8",
+    "tar-fs": "^0.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mafintosh/github-to-s3.git"
+  },
+  "keywords": [
+    "github",
+    "s3",
+    "aws",
+    "deploy"
+  ],
+  "author": "e-conomic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/github-to-s3/issues"
+  },
+  "homepage": "https://github.com/mafintosh/github-to-s3"
+}
