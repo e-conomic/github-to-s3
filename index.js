@@ -114,7 +114,7 @@ module.exports = function(opts, cb) {
     var build = function(next) {
       if (opts.build === false) return next()
       debug('building project')
-      proc.exec(opts.install || 'npm run build', {cwd:folder}, next)
+      proc.exec(opts.build || 'npm run build', {cwd:folder}, next)
     }
 
     install(function(err) {
