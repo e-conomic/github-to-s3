@@ -18,13 +18,9 @@
   "bin": {
     "github-to-s3": "./cli.js"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mafintosh/github-to-s3.git"
+    "url": "git://github.com/e-conomic/github-to-s3.git"
   },
   "keywords": [
     "github",
@@ -35,7 +31,7 @@
   "author": "e-conomic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/github-to-s3/issues"
+    "url": "https://github.com/e-conomic/github-to-s3/issues"
   },
-  "homepage": "https://github.com/mafintosh/github-to-s3"
+  "homepage": "https://github.com/e-conomic/github-to-s3"
 }
