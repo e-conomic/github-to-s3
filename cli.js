@@ -35,7 +35,7 @@ var onerror = function(err) {
 ghauth({configName: 'github-to-s3', scopes:['repo'], note:'This is for github-to-s3'}, function(err, github) {
   if (err) return onerror(err)
 
-  awsauth({profile: 'default'}, function(err, aws) {
+  awsauth({profile: 'github-to-s3'}, function(err, aws) {
     if (err) return onerror(err)
 
     var opts = {}
