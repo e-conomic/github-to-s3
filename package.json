@@ -4,10 +4,19 @@
   "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
+    "awsauth": "^1.1.1",
+    "debug": "^0.8.1",
+    "ghauth": "^0.1.1",
     "ignore-file": "^1.1.0",
+    "mime-types": "^1.0.0",
+    "minimist": "^0.1.0",
+    "pump": "^0.3.2",
     "request": "^2.36.0",
     "rimraf": "^2.2.8",
     "tar-fs": "^0.3.3"
+  },
+  "bin": {
+    "github-to-s3": "./cli.js"
   },
   "devDependencies": {},
   "scripts": {
